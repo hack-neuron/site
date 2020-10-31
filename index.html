@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Neuramark</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+    <style>
+        .card-border {
+            border: 1px solid rgba(0, 0, 0, .1);
+        }
+
+        #home {
+            scroll-margin-top: 45px;
+        }
+
+        #upload,
+        #upload-many,
+        #about {
+            scroll-margin-top: 60px;
+        }
+
+        @media (max-width: 767.98px) {
+            #home {
+                scroll-margin-top: 140px;
+            }
+
+            #upload,
+            #upload-many,
+            #about {
+                scroll-margin-top: 160px;
+            }
+        }
+
+        .hack-logos {
+            max-width: 96px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-light bg-white sticky-top flex-md-nowrap p-0">
+        <a class="navbar-brand col-md-3 col-lg-2 ml-2 h-100" href="/">
+            <img class="mr-2 my-n4" src="img/logo.svg" height="50">
+        </a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
+            data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="w-100"></div>
+        <div class="input-group mx-3 my-1">
+            <div class="input-group-prepend">
+                <a class="input-group-text bg-white" href="#"><span data-feather="search"></span></a>
+            </div>
+            <input type="text" class="form-control" placeholder="Поиск..." aria-label="Поиск..."
+                aria-describedby="search">
+        </div>
+        <a class="nav-link text-dark" href="#"><span data-feather="layers"></span></a>
+        <a class="nav-link text-dark" href="#"><span data-feather="message-square"></span></a>
+        <a class="nav-link text-dark" href="#"><span data-feather="bell"></span></a>
+        <a class="nav-link" href=""><img class="rounded-circle" src="img/user.png" width="40" height="40"></a>
+    </nav>
+    <hr class="m-0">
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu"
+                class="col-md-3 col-lg-2 d-md-block sidebar collapse bg-white nav flex-column nav-pills">
+                <div class="sidebar-sticky pt-3">
+                    <ul class="nav nav-pills flex-column p-3">
+                        <li class="nav-item">
+                            <a id="home-link" class="nav-link active" href="#home" onclick="switchPill(event);"><span
+                                    data-feather="home"></span>Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="upload-link" class="nav-link" href="#upload" onclick="switchPill(event);"><span
+                                    data-feather="file-plus"></span>Загрузить
+                                данные</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="upload-many-link" class="nav-link" href="#upload-many"
+                                onclick="switchPill(event);"><span data-feather="box"></span>Загрузить архив</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="about-link" class="nav-link" href="#about" onclick="switchPill(event);"><span
+                                    data-feather="info"></span>О программе</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="text-center p-3 w-100">
+                    <img class="w-75 p-3" src="img/tlogo_0.svg">
+                    <br>
+                    <img class="p-3 hack-logos" src="img/tlogo3.png">
+                    <img class="p-3 hack-logos" src="img/tlogo11.png">
+                </div>
+
+                <div class="w-100 text-center">
+                    <p class="m-0 p-0">&copy; Neuramark 2020</p>
+                    <a class="m-0 p-0" href="/">neuramark.ru</a>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+
+                <div id="carouselControls" class="carousel slide mt-4 card-border rounded" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slide_1.svg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide_2.svg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slide_3.svg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded my-4 p-3 card-border tab-pane fade show active" id="home" role="tabpanel"
+                    aria-labelledby="pills-home-tab">
+
+                    <h2 id="home">Главная</h2>
+                    <div class="row">
+                        <div class="col-lg text-justify">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet numquam, temporibus,
+                                animi odit nesciunt iusto facere perspiciatis repudiandae eum voluptatem ex voluptatum
+                                dolorum similique labore, praesentium omnis facilis architecto dignissimos.
+                                Vero laborum quas, dignissimos facere perspiciatis debitis enim dicta cumque quam nam
+                                amet culpa dolores praesentium accusamus? Distinctio voluptatum officiis cum saepe a
+                                eveniet adipisci expedita animi vitae, illo quod!
+                                Voluptatibus id rem dolor quis et! Inventore rem sit ipsa quibusdam ea, ipsum at in,
+                                optio sunt dolorum adipisci aut consectetur est vitae? Excepturi recusandae eveniet,
+                                incidunt numquam minus facilis!
+                                Ad amet suscipit modi architecto eveniet minima quisquam reprehenderit voluptatum, iure
+                                quasi hic totam quo laboriosam optio maiores ex perferendis veritatis consectetur culpa
+                                dignissimos vero facere aperiam. Expedita, laudantium nihil.
+                                Quis minima eveniet ut maiores neque rem rerum ea, totam consequuntur nesciunt fugiat
+                                maxime magni sunt atque ducimus voluptatibus reiciendis nam iusto. Cumque saepe odit ab
+                                accusantium velit voluptatem pariatur!
+                                Sed dolorem architecto aperiam qui rerum libero quaerat consectetur eum sint temporibus,
+                                nulla eligendi tempore. Perferendis, consectetur harum id est sapiente dolorem quibusdam
+                                exercitationem soluta reiciendis ipsum unde cumque libero!
+                                Accusamus, quam voluptate deserunt ducimus fuga eum! Dolorem minima quaerat ipsum,
+                                possimus et explicabo repellendus, dolor temporibus aliquid doloremque at iste
+                                provident. Animi sapiente dignissimos voluptas ducimus incidunt harum cum!</p>
+                        </div>
+                    </div>
+
+                    <h2 id="upload" class="mt-4">Загрузить данные</h2>
+                    <div class="row" id="upload-step-1">
+                        <div class="col-lg">
+                            <form id="upload-form">
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="file" class="custom-file-input" id="doc_markup" name="doc_markup"
+                                            required>
+                                        <label class="custom-file-label" for="doc_markup">Выберите файл разметки
+                                            эксперта...</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="file" class="custom-file-input" id="ai_markup" name="ai_markup"
+                                            required>
+                                        <label class="custom-file-label" for="ai_markup">Выберите файл разметки
+                                            ИИ-сервиса...</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="file" class="custom-file-input" id="scan" name="scan" required>
+                                        <label class="custom-file-label" for="scan">Выберите файл
+                                            рентгеновского снимка...</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <button class="btn btn-primary form-control">Отправить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row d-none" id="upload-step-2">
+                        <div class="col-lg text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="sr-only">Идёт обработка данных...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-none" id="upload-step-3">
+                        <div class="col-lg-8">
+                            <h4 class="my-4">Точность разметки ИИ-сервиса:</h4>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" id="uploadResult" role="progressbar"
+                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="mt-5">Вес метрик, используемых для оценки:</h4>
+                            <canvas class="my-4 w-100" id="uploadChart" width="960" height="480"></canvas>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img src="img/body.svg" width="65%">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" id="upload-again-btn">В начало</button>
+                    </div>
+
+                    <h2 id="upload-many">Загрузить архив</h2>
+                    <div class="row">
+                        <div class="col-lg">
+                            <form id="upload-many-form">
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="file" class="custom-file-input" id="archive" name="archive"
+                                            required>
+                                        <label class="custom-file-label" for="archive">Выберите архив с
+                                            данными...</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <button class="btn btn-primary form-control">Отправить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <h2 id="about" class="mt-4">О программе</h2>
+                    <div class="row">
+                        <div class="col-lg text-justify">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet numquam, temporibus,
+                                animi odit nesciunt iusto facere perspiciatis repudiandae eum voluptatem ex voluptatum
+                                dolorum similique labore, praesentium omnis facilis architecto dignissimos.
+                                Vero laborum quas, dignissimos facere perspiciatis debitis enim dicta cumque quam nam
+                                amet culpa dolores praesentium accusamus? Distinctio voluptatum officiis cum saepe a
+                                eveniet adipisci expedita animi vitae, illo quod!
+                                Voluptatibus id rem dolor quis et! Inventore rem sit ipsa quibusdam ea, ipsum at in,
+                                optio sunt dolorum adipisci aut consectetur est vitae? Excepturi recusandae eveniet,
+                                incidunt numquam minus facilis!
+                                Ad amet suscipit modi architecto eveniet minima quisquam reprehenderit voluptatum, iure
+                                quasi hic totam quo laboriosam optio maiores ex perferendis veritatis consectetur culpa
+                                dignissimos vero facere aperiam. Expedita, laudantium nihil.
+                                Quis minima eveniet ut maiores neque rem rerum ea, totam consequuntur nesciunt fugiat
+                                maxime magni sunt atque ducimus voluptatibus reiciendis nam iusto. Cumque saepe odit ab
+                                accusantium velit voluptatem pariatur!
+                                Sed dolorem architecto aperiam qui rerum libero quaerat consectetur eum sint temporibus,
+                                nulla eligendi tempore. Perferendis, consectetur harum id est sapiente dolorem quibusdam
+                                exercitationem soluta reiciendis ipsum unde cumque libero!
+                                Accusamus, quam voluptate deserunt ducimus fuga eum! Dolorem minima quaerat ipsum,
+                                possimus et explicabo repellendus, dolor temporibus aliquid doloremque at iste
+                                provident. Animi sapiente dignissimos voluptas ducimus incidunt harum cum!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet numquam, temporibus,
+                                animi odit nesciunt iusto facere perspiciatis repudiandae eum voluptatem ex voluptatum
+                                dolorum similique labore, praesentium omnis facilis architecto dignissimos.
+                                Vero laborum quas, dignissimos facere perspiciatis debitis enim dicta cumque quam nam
+                                amet culpa dolores praesentium accusamus? Distinctio voluptatum officiis cum saepe a
+                                eveniet adipisci expedita animi vitae, illo quod!
+                                Voluptatibus id rem dolor quis et! Inventore rem sit ipsa quibusdam ea, ipsum at in,
+                                optio sunt dolorum adipisci aut consectetur est vitae? Excepturi recusandae eveniet,
+                                incidunt numquam minus facilis!
+                                Ad amet suscipit modi architecto eveniet minima quisquam reprehenderit voluptatum, iure
+                                quasi hic totam quo laboriosam optio maiores ex perferendis veritatis consectetur culpa
+                                dignissimos vero facere aperiam. Expedita, laudantium nihil.
+                                Quis minima eveniet ut maiores neque rem rerum ea, totam consequuntur nesciunt fugiat
+                                maxime magni sunt atque ducimus voluptatibus reiciendis nam iusto. Cumque saepe odit ab
+                                accusantium velit voluptatem pariatur!
+                                Sed dolorem architecto aperiam qui rerum libero quaerat consectetur eum sint temporibus,
+                                nulla eligendi tempore. Perferendis, consectetur harum id est sapiente dolorem quibusdam
+                                exercitationem soluta reiciendis ipsum unde cumque libero!
+                                Accusamus, quam voluptate deserunt ducimus fuga eum! Dolorem minima quaerat ipsum,
+                                possimus et explicabo repellendus, dolor temporibus aliquid doloremque at iste
+                                provident. Animi sapiente dignissimos voluptas ducimus incidunt harum cum!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet numquam, temporibus,
+                                animi odit nesciunt iusto facere perspiciatis repudiandae eum voluptatem ex voluptatum
+                                dolorum similique labore, praesentium omnis facilis architecto dignissimos.
+                                Vero laborum quas, dignissimos facere perspiciatis debitis enim dicta cumque quam nam
+                                amet culpa dolores praesentium accusamus? Distinctio voluptatum officiis cum saepe a
+                                eveniet adipisci expedita animi vitae, illo quod!
+                                Voluptatibus id rem dolor quis et! Inventore rem sit ipsa quibusdam ea, ipsum at in,
+                                optio sunt dolorum adipisci aut consectetur est vitae? Excepturi recusandae eveniet,
+                                incidunt numquam minus facilis!
+                                Ad amet suscipit modi architecto eveniet minima quisquam reprehenderit voluptatum, iure
+                                quasi hic totam quo laboriosam optio maiores ex perferendis veritatis consectetur culpa
+                                dignissimos vero facere aperiam. Expedita, laudantium nihil.
+                                Quis minima eveniet ut maiores neque rem rerum ea, totam consequuntur nesciunt fugiat
+                                maxime magni sunt atque ducimus voluptatibus reiciendis nam iusto. Cumque saepe odit ab
+                                accusantium velit voluptatem pariatur!
+                                Sed dolorem architecto aperiam qui rerum libero quaerat consectetur eum sint temporibus,
+                                nulla eligendi tempore. Perferendis, consectetur harum id est sapiente dolorem quibusdam
+                                exercitationem soluta reiciendis ipsum unde cumque libero!
+                                Accusamus, quam voluptate deserunt ducimus fuga eum! Dolorem minima quaerat ipsum,
+                                possimus et explicabo repellendus, dolor temporibus aliquid doloremque at iste
+                                provident. Animi sapiente dignissimos voluptas ducimus incidunt harum cum!</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet numquam, temporibus,
+                                animi odit nesciunt iusto facere perspiciatis repudiandae eum voluptatem ex voluptatum
+                                dolorum similique labore, praesentium omnis facilis architecto dignissimos.
+                                Vero laborum quas, dignissimos facere perspiciatis debitis enim dicta cumque quam nam
+                                amet culpa dolores praesentium accusamus? Distinctio voluptatum officiis cum saepe a
+                                eveniet adipisci expedita animi vitae, illo quod!
+                                Voluptatibus id rem dolor quis et! Inventore rem sit ipsa quibusdam ea, ipsum at in,
+                                optio sunt dolorum adipisci aut consectetur est vitae? Excepturi recusandae eveniet,
+                                incidunt numquam minus facilis!
+                                Ad amet suscipit modi architecto eveniet minima quisquam reprehenderit voluptatum, iure
+                                quasi hic totam quo laboriosam optio maiores ex perferendis veritatis consectetur culpa
+                                dignissimos vero facere aperiam. Expedita, laudantium nihil.
+                                Quis minima eveniet ut maiores neque rem rerum ea, totam consequuntur nesciunt fugiat
+                                maxime magni sunt atque ducimus voluptatibus reiciendis nam iusto. Cumque saepe odit ab
+                                accusantium velit voluptatem pariatur!
+                                Sed dolorem architecto aperiam qui rerum libero quaerat consectetur eum sint temporibus,
+                                nulla eligendi tempore. Perferendis, consectetur harum id est sapiente dolorem quibusdam
+                                exercitationem soluta reiciendis ipsum unde cumque libero!
+                                Accusamus, quam voluptate deserunt ducimus fuga eum! Dolorem minima quaerat ipsum,
+                                possimus et explicabo repellendus, dolor temporibus aliquid doloremque at iste
+                                provident. Animi sapiente dignissimos voluptas ducimus incidunt harum cum!</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+
+        function switchPill(e) {
+            for (const pillId of ['#home-link', '#upload-link', '#upload-many-link', '#about-link']) {
+                $(pillId).removeClass('active');
+            };
+            $('#' + e.target.id).addClass('active');
+            $('#sidebarMenu').removeClass('show');
+        };
+    </script>
+
+</body>
+
+</html>
