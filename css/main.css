@@ -117,6 +117,10 @@
   color: #1dc570 !important;
 }
 
+p {
+  text-indent: 25px; /* Отступ первой строки в пикселах */
+}
+
 a {
   color: #1dc570;
 }
