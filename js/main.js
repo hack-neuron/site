@@ -45,7 +45,7 @@ window.myChart = new Chart(ctx, {
     }
 })
 
-var token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJuYW1lIjoic2l0ZV9hcHAiLCJ0aW1lIjoxNjA0MTQzNDg0fQ.MSR8ZghXv9_HYBDA_gD4r6S6KisZLJUDO0xTzZLjKSHU2imMWszjBOcVfAr6M5Ci9QPGDSpzInAxvbEbm_EnLCKU8B9YTZeiA3Quu9EhjuuBN-cXaOB--I-HCCPz3HDdp9llU6jbbpdroVJfFO9MAgj8GY9AOY4jzbqdbtu2b3w'
+var token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJuYW1lIjoiYXBwX3NpdGUiLCJ0aW1lIjoxNjA0MTcxNjI0fQ.MUWldES0QLd2Uz0OXq2HWDk0Fj3H7kP3az2qn3x18W-mrRrS63Qme2f4kpS6Pe6wHKcbDKfLZWLLadG4EVOvSGBmHts6SJrkV3K2dG0hG5HzUiW30caH4mIR0-IrVTut1_OL6wSUdGGPL3LGG6NPWU36cpX_-LKfvh6u7gttOSI'
 
 
 var uploadForm = document.getElementById('upload-form');
