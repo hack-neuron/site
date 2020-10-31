@@ -34,6 +34,12 @@
   overflow-y: auto;
 }
 
+@media (min-width: 1999.98px) {
+  .sidebar-sticky {
+    height: calc(100vh - 48px - 56px - 440px); /* 100% - высота шапки - высота копирайта - лого организаторов */
+  }
+}
+
 @media (max-width: 1370.98px) {
   .sidebar-sticky {
     height: calc(100vh - 48px - 56px - 390px); /* 100% - высота шапки - высота копирайта - лого организаторов */
