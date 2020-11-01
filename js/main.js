@@ -124,9 +124,9 @@ uploadForm.addEventListener('submit', function (event) {
                                 step2.classList.add('d-none');
                                 step3.classList.remove('d-none');
 
-                                var percent = (json.result.rating * 100).toFixed(2);
+                                var percent = (json.result.rating * 20).toFixed(2);
                                 uploadResult.innerText = percent + '%';
-                                uploadResult.setAttribute('aria-valuenow', percent);
+                                uploadResult.setAttribute('aria-valuenow', json.result.rating);
                                 uploadResult.style.width = percent + '%';
 
                                 barChartData.labels = json.result.labels || Array.from(json.result.metrics.keys())
